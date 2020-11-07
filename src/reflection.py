@@ -5,7 +5,7 @@ class Integer:
     @property
     def value(self):
         return self._value
-    
+
     def __str__(self):
         return str(self.value)
 
@@ -22,7 +22,7 @@ class Float:
     @property
     def value(self):
         return self._value
-    
+
     def __str__(self):
         return str(self.value)
 

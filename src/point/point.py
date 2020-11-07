@@ -1,5 +1,6 @@
 from math import hypot
 
+
 class Point:
     # __slots__ = ['_x', '_y']
 
@@ -26,7 +27,7 @@ class Point:
     @property
     def x(self):
         return self._x
-    
+
     @property
     def y(self):
         return self._y
@@ -38,6 +39,11 @@ class Point:
     @y.setter
     def y(self, value):
         self._y = float(value)
+
+    def distance(self, other):
+        if not isinstance(other, self.__class__):
+            raise TypeError()
+        return hypot(self.x - other.x, self.y - other.y)
 
 
 if __name__ == '__main__':
