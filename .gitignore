@@ -2,4 +2,7 @@
 venv/
 env/
 __pycache__/
+.coverage
+cover/
+.pytest_cache/
 

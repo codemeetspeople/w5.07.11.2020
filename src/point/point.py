@@ -46,7 +46,7 @@ class Point:
         return hypot(self.x - other.x, self.y - other.y)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     p1 = Point()
     p2 = Point()
     p3 = Point(2, 7)
@@ -56,3 +56,6 @@ if __name__ == '__main__':
 
     if p1 != p3:
         print(f'{p1} != {p3}')
+
+    p1.x = 10
+    print(p1.x)
