@@ -1,6 +1,7 @@
 """Module with Point class implementation"""
 
-from typing import Type
+from __future__ import annotations
+
 from math import hypot
 
 
@@ -26,12 +27,12 @@ class Point:
     def __repr__(self) -> str:
         return f'({self.x}, {self.y})'
 
-    def __eq__(self, other: Type) -> bool:
+    def __eq__(self, other: Point) -> bool:
         if not isinstance(other, self.__class__):
             return NotImplemented
         return self.x == other.x and self.y == other.y
 
-    def __ne__(self, other: Type) -> bool:
+    def __ne__(self, other: Point) -> bool:
         if not isinstance(other, self.__class__):
             return NotImplemented
         return not self == other
@@ -52,7 +53,7 @@ class Point:
     def y(self, value: float) -> float:
         self._y = float(value)
 
-    def distance(self, other: Type) -> float:
+    def distance(self, other: Point) -> float:
         """Calculates distance between two points
 
         :param other: point object
